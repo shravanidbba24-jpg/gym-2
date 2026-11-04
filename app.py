@@ -264,6 +264,7 @@ if USE_FLASK:
         return response
 
     @app.route("/", methods=["GET", "OPTIONS"])
+    @app.route("/api", methods=["GET", "OPTIONS"])
     def index():
         if request.method == "OPTIONS":
             return ("", 204)
@@ -289,6 +290,7 @@ if USE_FLASK:
         })
 
     @app.route("/api/health", methods=["GET", "OPTIONS"])
+    @app.route("/health", methods=["GET", "OPTIONS"])
     def health_check():
         if request.method == "OPTIONS":
             return ("", 204)
@@ -302,30 +304,35 @@ if USE_FLASK:
         })
 
     @app.route("/api/programs", methods=["GET", "OPTIONS"])
+    @app.route("/programs", methods=["GET", "OPTIONS"])
     def get_programs():
         if request.method == "OPTIONS":
             return ("", 204)
         return jsonify(PROGRAMS_DATA)
 
     @app.route("/api/services", methods=["GET", "OPTIONS"])
+    @app.route("/services", methods=["GET", "OPTIONS"])
     def get_services():
         if request.method == "OPTIONS":
             return ("", 204)
         return jsonify(SERVICES_DATA)
 
     @app.route("/api/diet-plans", methods=["GET", "OPTIONS"])
+    @app.route("/diet-plans", methods=["GET", "OPTIONS"])
     def get_diet_plans():
         if request.method == "OPTIONS":
             return ("", 204)
         return jsonify(DIET_PLANS)
 
     @app.route("/api/reviews", methods=["GET", "OPTIONS"])
+    @app.route("/reviews", methods=["GET", "OPTIONS"])
     def get_reviews():
         if request.method == "OPTIONS":
             return ("", 204)
         return jsonify(REVIEWS_DATA)
 
     @app.route("/api/members", methods=["GET", "POST", "DELETE", "OPTIONS"])
+    @app.route("/members", methods=["GET", "POST", "DELETE", "OPTIONS"])
     def handle_members():
         if request.method == "OPTIONS":
             return ("", 204)
@@ -342,6 +349,7 @@ if USE_FLASK:
             return _create_member(data)
 
     @app.route("/api/members/<member_id>", methods=["GET", "DELETE", "OPTIONS"])
+    @app.route("/members/<member_id>", methods=["GET", "DELETE", "OPTIONS"])
     def handle_single_member(member_id):
         if request.method == "OPTIONS":
             return ("", 204)
@@ -365,6 +373,7 @@ if USE_FLASK:
             })
 
     @app.route("/join", methods=["POST", "OPTIONS"])
+    @app.route("/api/join", methods=["POST", "OPTIONS"])
     def join_gym():
         if request.method == "OPTIONS":
             return ("", 204)
@@ -372,6 +381,7 @@ if USE_FLASK:
         return _create_member(data)
 
     @app.route("/api/export", methods=["GET", "OPTIONS"])
+    @app.route("/export", methods=["GET", "OPTIONS"])
     def export_csv():
         if request.method == "OPTIONS":
             return ("", 204)

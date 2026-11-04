@@ -809,25 +809,10 @@ export default function App() {
 
             {/* Live Database Viewer & CSV Export */}
             <div className="lg:col-span-7 bg-[#222222] border border-[#333333] rounded-xl p-6 shadow-xl flex flex-col">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#333333]">
-                <div>
-                  <h3 className="font-display text-xl font-bold uppercase text-white">
-                    Registered Athletes (members.csv)
-                  </h3>
-                  <p className="text-[11px] text-[#aaaaaa]">
-                    {filteredMembers.length} records in active memory & CSV
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={handleExportCSV}
-                    className="bg-[#333333] hover:bg-[#444444] text-white px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-colors border border-[#444444]"
-                  >
-                    <Download className="w-3.5 h-3.5 text-[#ffa500]" />
-                    <span>Download CSV</span>
-                  </button>
-                </div>
+              <div className="pb-4 border-b border-[#333333]">
+                <h3 className="font-display text-xl font-bold uppercase text-white">
+                  Registered Athletes (members.csv)
+                </h3>
               </div>
 
               {/* Search */}

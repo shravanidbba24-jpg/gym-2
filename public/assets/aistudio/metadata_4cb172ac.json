@@ -1,0 +1,6 @@
+{
+  "name": "Fitness Gym - High-Performance Training Club",
+  "description": "Premier fitness gym web application with weight training, cardio, yoga, custom diet plans, BMI calculator, class schedule, and full Python backend integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

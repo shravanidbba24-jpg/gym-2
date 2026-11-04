@@ -1,0 +1,6 @@
+{
+  "name": "Fitness Gym - Vercel Ready",
+  "description": "High-Performance Training Club in Pune, India with Olympic strength training, high-protein Indian diet plans, member registry, and full Vercel serverless deployment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

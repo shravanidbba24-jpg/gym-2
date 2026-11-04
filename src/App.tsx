@@ -728,9 +728,6 @@ export default function App() {
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase text-white">
               Join Our Gym
             </h2>
-            <p className="text-[#cccccc] text-sm">
-              Register below to generate your digital membership pass and sync with <code className="text-[#ffa500]">members.csv</code>.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
